@@ -1,0 +1,30 @@
+.detail-view{
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 14px;
+}
+
+table.detail-view th
+{
+    padding: 5px 20px;    
+    text-transform: capitalize;
+    text-align: left;
+    width: 15%;
+    border-top: 1px solid #e7ecf1;
+}
+
+table.detail-view tr.odd
+{
+    padding: 5px;
+    background-color: #fbfcfd;
+    border-top: 1px solid #e7ecf1;
+}
+
+table.detail-view tr.even
+{
+    padding: 5px;
+    background-color:#ffffff;
+    border-top: 1px solid #e7ecf1;
+}

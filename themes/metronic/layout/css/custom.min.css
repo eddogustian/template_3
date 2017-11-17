@@ -1,0 +1,12 @@
+.btn-pager{
+    padding: 0px;
+}
+
+ul.yiiPager a:link, ul.yiiPager a:visited {
+    font-weight: normal !important;    
+}
+
+table thead tr th
+{
+    text-transform: capitalize;
+}

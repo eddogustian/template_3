@@ -1,0 +1,32 @@
+2017/11/13 13:58:53 [error] [exception.CException] CException: Alias "booster.widgets.TbDateRangePicker" is invalid. Make sure it points to an existing directory or file. in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:348
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWidgetFactory.php(146): YiiBase::import('booster.widgets...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminController), 'booster.widgets...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(181): CBaseController->createWidget('booster.widgets...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/template_2/protected/modules/user/views/admin/_search.php(40): CBaseController->widget('booster.widgets...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(872): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/template_2/protected/modules/user/views/admin/index.php(61): CController->renderPartial('_search', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(872): CBaseController->renderFile('/Applications/X...', Array, true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(785): CController->renderPartial('index', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/template_2/protected/modules/user/controllers/AdminController.php(57): CController->render('index', Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionAdmin()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/template_2/protected/modules/rights/components/RController.php(36): CFilter->filter(Object(CFilterChain))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): RController->filterRights(Object(CFilterChain))
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/admin')
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#25 /Applications/XAMPP/xamppfiles/htdocs/template_2/index.php(34): CApplication->run()
+#26 {main}
+REQUEST_URI=/template_2/index.php/user/admin
+HTTP_REFERER=http://localhost/template_2/index.php/user/admin
+---
