@@ -5,7 +5,6 @@
 ?>
 
 <div class="form">
-
 	<?php $form=$this->beginWidget('CActiveForm', array(
 		'action'=>Yii::app()->createUrl($this->route),
 		'method'=>'get',
@@ -29,5 +28,4 @@
 	</div>
 	
 	<?php $this->endWidget(); ?>
-
 </div><!-- search-form -->

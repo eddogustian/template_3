@@ -17,7 +17,6 @@ $this->menu=array(
 <h1><?php echo UserModule::t('View User').' "'.$model->username.'"'; ?></h1>
 
 <?php
- 
 	$attributes = array(
 		'id',
 		'username',
@@ -55,6 +54,4 @@ $this->menu=array(
 		'data'=>$model,
 		'attributes'=>$attributes,
 	));
-	
-
 ?>

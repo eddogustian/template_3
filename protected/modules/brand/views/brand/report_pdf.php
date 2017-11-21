@@ -30,7 +30,6 @@
         <h2><?=strtoupper(Yii::app()->controller->id)?> REPORT</h2>
     </div>
     <div id="content" style="text-align:center;">
-            
         <table width="100%" cellpadding="3" style="border-collapse: collapse; border-spacing: 0;">
             <tr>
                 <th style="border-bottom: 1px solid #000;">No</th>
@@ -59,9 +58,7 @@
                     </tr>';
             }
             ?>
-
         </table>
-
     </div>
 </body>
 </html>

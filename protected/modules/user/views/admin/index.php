@@ -151,7 +151,7 @@
 						// 'lastvisit_at',
 						array(
 							'name' => 'lastvisit_at',
-							'value'=> '!empty($data->lastvisit_at) ? date_format(date_create($data->lastvisit_at),"d-m-Y H:i:s") : "-"',
+							'value'=> '$data->lastvisit_at != "0000-00-00 00:00:00" ? date_format(date_create($data->lastvisit_at),"d-m-Y H:i:s") : "-"',
 						),
 						array(
 							'name'=>'superuser',
