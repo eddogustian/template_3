@@ -196,5 +196,6 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 		'company'=>'Nadyne',
 		'authors'=>'Octavian Panggestu',
+		'author_link'=>'#',
 	),
 );
