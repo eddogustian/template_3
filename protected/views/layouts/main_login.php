@@ -34,8 +34,6 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
@@ -84,7 +82,6 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>
-        <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/scripts/app.min.js" type="text/javascript"></script>

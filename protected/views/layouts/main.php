@@ -30,8 +30,10 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-daterangepicker/css/bootstrap-daterangepicker.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-daterangepicker/css/bootstrap-daterangepicker.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/css/plugins.min.css" rel="stylesheet" type="text/css" />
@@ -54,10 +56,12 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/js.cookie.min.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <!-- END CORE PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-daterangepicker/js/moment.min.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-daterangepicker/js/bootstrap.daterangepicker.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
-        <!-- END CORE PLUGINS -->
+        <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/scripts/app.min.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
