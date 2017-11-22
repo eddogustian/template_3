@@ -11,6 +11,13 @@ class ProfileFieldController extends Controller
 	public $defaultAction = 'admin';
 	public $layout='//layouts/column2';
 
+	// // If Go Live must be active
+	// protected function beforeAction($event)
+    // {
+	// 	$this->redirect(Yii::app()->baseUrl.'/index.php/user/admin');
+    // }
+	// // End. If Go Live must be active
+
 	/**
 	 * @return array action filters
 	 */
