@@ -11,6 +11,8 @@ class DefaultController extends Controller
 		$user = User::model()->findByPk(Yii::app()->user->id);
 		if($user->profile->level != 'admin')
 			$this->redirect(Yii::app()->baseUrl.'/index.php/site/forbidden');
+		// else
+		// 	$this->redirect(Yii::app()->baseUrl.'/index.php/user/admin');
 
 		$dataProvider=new CActiveDataProvider('User', array(
 			'criteria'=>array(
