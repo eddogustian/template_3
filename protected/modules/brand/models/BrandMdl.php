@@ -10,7 +10,53 @@
  */
 class BrandMdl extends Brand
 {
+	/**
+	 * @return array relational rules.
+	 */
+	public function relations()
+	{
+		// NOTE: you may need to adjust the relation name and the related
+		// class name for the relations automatically generated below.
+		$arRel = parent::relations();
+		$arRel["users"] = array(self::BELONGS_TO, 'Users', 'user_created');
+		return $arRel;
+	}
 	
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 *
+	 * Typical usecase:
+	 * - Initialize the model fields with values from filter form.
+	 * - Execute this method to get CActiveDataProvider instance which will filter
+	 * models according to data in model fields.
+	 * - Pass data provider to CGridView, CListView or any similar widget.
+	 *
+	 * @return CActiveDataProvider the data provider that can return the models
+	 * based on the search/filter conditions.
+	 */
+	public function search()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('id',$this->id);
+		$criteria->compare('brand_name',$this->brand_name,true);
+		$criteria->compare('brand_type',$this->brand_type,true);
+		$criteria->compare('user_created',$this->user_created);
+		$criteria->compare('time_created',$this->time_created,true);
+		$criteria->compare('user_modified',$this->user_modified);
+		$criteria->compare('time_modified',$this->time_modified,true);
+		$criteria->compare('deleted',$this->deleted);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'sort'=>array(
+				'defaultOrder'=>'brand_name ASC',
+			)
+		));
+	}
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
@@ -22,18 +68,6 @@ class BrandMdl extends Brand
 		return parent::model($className);
 	}
 
-	/**
-	 * @return array relational rules.
-	 */
-	public function relations()
-	 {
-		 // NOTE: you may need to adjust the relation name and the related
-		 // class name for the relations automatically generated below.
-		 $arRel = parent::relations();
-		 $arRel["users"] = array(self::BELONGS_TO, 'Users', 'user_created');
-		 return $arRel;
-	}
- 
 	function behaviors()
 	{
 		return array(
@@ -70,29 +104,6 @@ class BrandMdl extends Brand
 		}
 		else
 			return false;
-	}
-
-	public function search()
-	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
-
-		$criteria=new CDbCriteria;
-
-		$criteria->compare('id',$this->id);
-		$criteria->compare('brand_name',$this->brand_name,true);
-		$criteria->compare('brand_type',$this->brand_type,true);
-		$criteria->compare('user_created',$this->user_created);
-		$criteria->compare('time_created',$this->time_created,true);
-		$criteria->compare('user_modified',$this->user_modified);
-		$criteria->compare('time_modified',$this->time_modified,true);
-		$criteria->compare('deleted',$this->deleted);
-
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-			'sort'=>array(
-				'defaultOrder'=>'brand_name ASC',
-			)
-		));
 	}
 
 	public function downloadDataByFilter()
