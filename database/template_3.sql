@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 17, 2017 at 09:56 AM
+-- Generation Time: Nov 23, 2017 at 03:47 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -138,7 +138,7 @@ CREATE TABLE `brand` (
   `time_created` datetime DEFAULT NULL,
   `user_modified` int(11) NOT NULL DEFAULT '0',
   `time_modified` datetime DEFAULT NULL,
-  `deleted` int(1) NOT NULL DEFAULT '0'
+  `deleted` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -294,7 +294,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `activkey`, `create_at`, `lastvisit_at`, `superuser`, `status`) VALUES
-(1, 'admin', '5e31a175b489d1fec64fb59148e7f197', 'admin@nadyne.com', 'e2e79d67f31ab9236c5cbd734727fc62', '2017-10-31 06:03:36', '2017-11-17 08:46:23', 1, 1),
+(1, 'admin', '5e31a175b489d1fec64fb59148e7f197', 'admin@nadyne.com', 'e2e79d67f31ab9236c5cbd734727fc62', '2017-10-31 06:03:36', '2017-11-22 10:28:52', 1, 1),
 (2, 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229', 'demo@nadyne.com', '099f825543f7850cc038b90aaff39fac', '2017-11-01 06:03:36', '2017-11-09 07:23:30', 0, 1),
 (3, 'octavian', '5e31a175b489d1fec64fb59148e7f197', 'octavian.ocpang@gmail.com', '23e691b5eaebf32d8478847fc0c49fe6', '2017-11-02 03:17:47', '2017-11-16 06:22:25', 0, 1);
 
