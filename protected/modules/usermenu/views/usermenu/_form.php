@@ -7,7 +7,7 @@
 					<span class="caption-subject font-green bold uppercase">Form</span>
 				</div>
 				<div class="tools">
-					<button class="btn green btn-sm" onclick="window.location.href='<?=Yii::app()->createUrl("menu/menu");?>'"><i class="fa fa-list"></i> <?=ucfirst(Yii::app()->controller->id)?> List</button>
+					<button class="btn green btn-sm" onclick="window.location.href='<?=Yii::app()->createUrl("usermenu/usermenu");?>'"><i class="fa fa-list"></i> <?=ucfirst(Yii::app()->controller->id)?> List</button>
 				</div>
 			</div>
 			<div class="portlet-body">
