@@ -175,8 +175,8 @@
 								'settings'=>array(
 									'label'=>'<i class="icon-settings"></i>',
 									'imageUrl'=>true,
-									'url'=>"CHtml::normalizeUrl(array('/usermenu/usermenu/admin', 'id'=>\$data->id))",
-									// 'url'=>Yii::app()->baseUrl.'/index.php/usermenu/usermenu',
+									'url'=>"CHtml::normalizeUrl(array('/usermenu/usermenu/admin', 'UserMenuMdl[user_id]'=>\$data->id))",
+									// 'url'=>"CHtml::normalizeUrl(array('/usermenu/usermenu/admin', 'id'=>\$data->id))",
 									'options'=>array('class'=>'btn btn-sm btn-info', 'title' => 'Settings', 'href' => Yii::app()->baseUrl.'/index.php/usermenu/usermenu'),
 								),
 								'update'=>array(
