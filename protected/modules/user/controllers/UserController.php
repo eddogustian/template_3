@@ -39,6 +39,9 @@ class UserController extends Controller
 	 */
 	public function actionView()
 	{
+		if(Yii::app()->user->isGuest)
+			$this->redirect(Yii::app()->baseUrl.'/index.php/site/forbidden');
+
 		$model = $this->loadModel();
 		$this->render('view',array(
 			'model'=>$model,
