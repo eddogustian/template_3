@@ -177,7 +177,7 @@
 									'imageUrl'=>true,
 									'url'=>"CHtml::normalizeUrl(array('/usermenu/usermenu/admin', 'UserMenuMdl[user_id]'=>\$data->id))",
 									// 'url'=>"CHtml::normalizeUrl(array('/usermenu/usermenu/admin', 'id'=>\$data->id))",
-									'options'=>array('class'=>'btn btn-sm btn-info', 'title' => 'Settings', 'href' => Yii::app()->baseUrl.'/index.php/usermenu/usermenu'),
+									'options'=>array('class'=>'btn btn-sm btn-info', 'title' => 'Settings'),
 								),
 								'update'=>array(
 									'label'=>'<i class="fa fa-pencil"></i>',
