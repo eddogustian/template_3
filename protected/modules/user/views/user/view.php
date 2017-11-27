@@ -33,6 +33,7 @@
 				// For all users
 				$attributes = array(
 					'username',
+					'email',
 				);
 				
 				$profileFields=ProfileField::model()->forAll()->sort()->findAll();
