@@ -84,9 +84,10 @@ class UsermenuController extends RController
 		if(isset($_POST['UserMenuMdl']))
 		{
 			$model->attributes=$_POST['UserMenuMdl'];
-			if($model->save())
-				// $this->redirect(array('view','id'=>$model->id));
+			if($model->save()){
+				Yii::app()->user->setState("message", Yii::app()->params['saved_successfully']);
 				$this->redirect(array('admin'));
+			}
 		}
 
 		$this->render('create',array(
@@ -113,9 +114,10 @@ class UsermenuController extends RController
 		if(isset($_POST['UserMenuMdl']))
 		{
 			$model->attributes=$_POST['UserMenuMdl'];
-			if($model->save())
-				// $this->redirect(array('view','id'=>$model->id));
+			if($model->save()){
+				Yii::app()->user->setState("message", Yii::app()->params['updated_successfully']);
 				$this->redirect(array('admin'));
+			}
 		}
 
 		$this->render('update',array(
@@ -130,8 +132,13 @@ class UsermenuController extends RController
 	 */
 	public function actionDelete($id)
 	{
+		// Check User Access
+		if(!AppComponent::get_user_access('usermenu', 'delete'))
+			$this->redirect(Yii::app()->baseUrl.'/index.php/site/forbidden');
+
 		// $this->loadModel($id)->delete();
-		$this->loadModel($id)->remove()->save();
+		if($this->loadModel($id)->remove()->save())
+			Yii::app()->user->setState("message", Yii::app()->params['deleted_successfully']);
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

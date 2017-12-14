@@ -44,10 +44,10 @@
 								<label for="form_control_1"><?php echo $form->labelEx($model,'email');?></label>
 							</div>
 							
-							<div class="form-group form-md-line-input form-md-floating-label has-success">
+							<!-- <div class="form-group form-md-line-input form-md-floating-label has-success">
 								<?php echo $form->dropDownList($model,'superuser',User::itemAlias('AdminStatus'),array('class'=>'form-control input-sm', 'id'=>'form_control_1')); ?>
 								<label for="form_control_1"><?php echo $form->labelEx($model,'superuser');?></label>
-							</div>
+							</div> -->
 
 							<div class="form-group form-md-line-input form-md-floating-label has-success">
 								<?php echo $form->dropDownList($model,'status',User::itemAlias('UserStatus'),array('class'=>'form-control input-sm', 'id'=>'form_control_1')); ?>

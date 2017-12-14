@@ -47,10 +47,13 @@
 					}
 				}
 				array_push($attributes,
-					'create_at',
+					array(
+						'name' => 'create_at',
+						'value' => date('d-m-Y H:i:s',strtotime($model->create_at)),
+					),
 					array(
 						'name' => 'lastvisit_at',
-						'value' => (($model->lastvisit_at!='0000-00-00 00:00:00')?$model->lastvisit_at:UserModule::t('Not visited')),
+						'value' => (($model->lastvisit_at!='0000-00-00 00:00:00') ? date('d-m-Y H:i:s',strtotime($model->lastvisit_at)) : UserModule::t('Not visited')),
 					)
 				);
 						

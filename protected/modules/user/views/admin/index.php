@@ -153,11 +153,11 @@
 							'name' => 'lastvisit_at',
 							'value'=> '$data->lastvisit_at != "0000-00-00 00:00:00" ? date_format(date_create($data->lastvisit_at),"d-m-Y H:i:s") : "-"',
 						),
-						array(
-							'name'=>'superuser',
-							'value'=>'User::itemAlias("AdminStatus",$data->superuser)',
-							'filter'=>User::itemAlias("AdminStatus"),
-						),
+						// array(
+						// 	'name'=>'superuser',
+						// 	'value'=>'User::itemAlias("AdminStatus",$data->superuser)',
+						// 	'filter'=>User::itemAlias("AdminStatus"),
+						// ),
 						array(
 							'name'=>'status',
 							'value'=>'User::itemAlias("UserStatus",$data->status)',

@@ -193,7 +193,10 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'saved_successfully'=>'Saved successfully',
+		'updated_successfully'=>'Updated successfully',
+		'deleted_successfully'=>'Deleted successfully',
+		
 		'company'=>'Nadyne',
 		'authors'=>'Octavian Panggestu',
 		'author_link'=>'#',

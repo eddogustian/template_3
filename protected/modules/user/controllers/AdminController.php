@@ -117,7 +117,10 @@ class AdminController extends RController
 					$command->execute(); // execute the non-query SQL
 					
 				}
+
+				Yii::app()->user->setState("message", Yii::app()->params['saved_successfully']);
 				$this->redirect(Yii::app()->baseUrl."/index.php/user/admin");
+
 			} else $profile->validate();
 		}
 
@@ -162,7 +165,9 @@ class AdminController extends RController
 				$command=Yii::app()->db->createCommand($sql);
 				$command->execute(); // execute the non-query SQL
 				
+				Yii::app()->user->setState("message", Yii::app()->params['updated_successfully']);
 				$this->redirect(Yii::app()->baseUrl."/index.php/user/admin");
+
 			} else $profile->validate();
 		}
 
@@ -193,7 +198,10 @@ class AdminController extends RController
 				}
 				$model->save();
 				$profile->save();
+
+				Yii::app()->user->setState("message", Yii::app()->params['updated_successfully']);
 				$this->redirect(Yii::app()->baseUrl."/index.php/user/user/view/id/".$model->id);
+
 			} else $profile->validate();
 		}
 
@@ -210,6 +218,10 @@ class AdminController extends RController
 	 */
 	public function actionDelete($id)
 	{
+		// Check User Access
+		if(!AppComponent::get_user_access('user', 'delete'))
+			$this->redirect(Yii::app()->baseUrl.'/index.php/site/forbidden');
+	
 		$model = $this->loadModel($id);
 		$profile = Profile::model()->findByPk($id);
 		
@@ -219,6 +231,8 @@ class AdminController extends RController
 		
 		$profile->delete();
 		$model->delete();
+
+		Yii::app()->user->setState("message", Yii::app()->params['deleted_successfully']);
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -360,7 +374,7 @@ class AdminController extends RController
 		}
 	
 		$objPHPExcel->setActiveSheetIndex(0);
-		$filename = 'User Report - '.date("Ymdhis");
+		$filename = 'User Report - '.date("YmdHis");
 		header('Content-Type: application/vnd.ms-excel');
 		header('Content-Disposition: attachment;filename="'.$filename.'.xls"');
 		header('Cache-Control: max-age=0');

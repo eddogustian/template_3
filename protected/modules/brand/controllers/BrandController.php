@@ -84,9 +84,10 @@ class BrandController extends RController
 		if(isset($_POST['BrandMdl']))
 		{
 			$model->attributes=$_POST['BrandMdl'];
-			if($model->save())
-				// $this->redirect(array('view','id'=>$model->id));
+			if($model->save()){
+				Yii::app()->user->setState("message", Yii::app()->params['saved_successfully']);
 				$this->redirect(array('admin'));
+			}
 		}
 
 		$this->render('create',array(
@@ -113,9 +114,10 @@ class BrandController extends RController
 		if(isset($_POST['BrandMdl']))
 		{
 			$model->attributes=$_POST['BrandMdl'];
-			if($model->save())
-				// $this->redirect(array('view','id'=>$model->id));
+			if($model->save()){
+				Yii::app()->user->setState("message", Yii::app()->params['updated_successfully']);
 				$this->redirect(array('admin'));
+			}
 		}
 
 		$this->render('update',array(
@@ -130,8 +132,13 @@ class BrandController extends RController
 	 */
 	public function actionDelete($id)
 	{
+		// Check User Access
+		if(!AppComponent::get_user_access('brand', 'delete'))
+			$this->redirect(Yii::app()->baseUrl.'/index.php/site/forbidden');
+	
 		// $this->loadModel($id)->delete();
-		$this->loadModel($id)->remove()->save();
+		if($this->loadModel($id)->remove()->save())
+			Yii::app()->user->setState("message", Yii::app()->params['deleted_successfully']);
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -300,7 +307,7 @@ class BrandController extends RController
 		}
 	
 		$objPHPExcel->setActiveSheetIndex(0);
-		$filename = 'Brand Report - '.date("Ymdhis");
+		$filename = 'Brand Report - '.date("YmdHis");
 		header('Content-Type: application/vnd.ms-excel');
 		header('Content-Disposition: attachment;filename="'.$filename.'.xls"');
 		header('Cache-Control: max-age=0');

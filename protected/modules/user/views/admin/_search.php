@@ -29,10 +29,10 @@
                     <label for="form_control_1"><?php echo $form->label($model,'lastvisit_at');?></label>
                 </div>
 
-                <div class="form-group form-md-line-input form-md-floating-label has-success">
+                <!-- <div class="form-group form-md-line-input form-md-floating-label has-success">
                     <?php echo $form->dropDownList($model,'superuser',$model->itemAlias('AdminStatus'),array('class'=>'form-control input-sm', 'id'=>'form_control_1')); ?>
                     <label for="form_control_1"><?php echo $form->label($model,'superuser');?></label>
-                </div>
+                </div> -->
 
                 <div class="form-group form-md-line-input form-md-floating-label has-success">
                     <?php echo $form->dropDownList($model,'status',$model->itemAlias('UserStatus'),array('class'=>'form-control input-sm', 'id'=>'form_control_1')); ?>

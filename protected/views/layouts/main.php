@@ -33,6 +33,10 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-daterangepicker/css/bootstrap-daterangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
@@ -60,6 +64,9 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-daterangepicker/js/moment.min.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-daterangepicker/js/bootstrap.daterangepicker.js" type="text/javascript"></script>
+        <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+        <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+        <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
@@ -124,8 +131,7 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
 
         <script>
-            $(document).ready(function()
-            {
+            $(document).ready(function(){
                 <?php
                 if(!isset($_GET['yt0'])){
                     echo "
@@ -134,8 +140,32 @@ License: You must have a valid license purchased only from themeforest(the above
                     ";
                 }
                 ?>
-                $(".only_number").inputmask({mask:"9",repeat:10,greedy:!1})
+               
+               $(".only_number").inputmask({mask:"9",repeat:10,greedy:!1})
             })
+
+            // Toast for Notification
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "positionClass": "toast-top-right",
+                "onclick": null,
+                "showDuration": "1000",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }	
+            
+            <?php
+            if(Yii::app()->user->hasState("message")){
+                echo 'toastr.success("'.Yii::app()->user->getState("message").'","Message");';
+                Yii::app()->user->setState("message", null);
+            }
+            ?>
         </script>
 
     </body>
