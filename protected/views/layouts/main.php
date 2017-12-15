@@ -34,6 +34,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-daterangepicker/css/bootstrap-daterangepicker.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />
@@ -65,9 +66,11 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-daterangepicker/js/moment.min.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-daterangepicker/js/bootstrap.daterangepicker.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-        <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+        <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script><script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
+        <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
+        <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/scripts/app.min.js" type="text/javascript"></script>
@@ -141,7 +144,14 @@ License: You must have a valid license purchased only from themeforest(the above
                 }
                 ?>
                
-               $(".only_number").inputmask({mask:"9",repeat:10,greedy:!1})
+               $(".only_number").inputmask({mask:"9",repeat:10,greedy:!1});
+                $('.start_date, .end_date').datepicker({
+                    format: 'dd-mm-yyyy',
+                    autoclose: true,
+                    todayBtn:'linked',
+                    todayHighlight:true,
+                });
+                
             })
 
             // Toast for Notification
