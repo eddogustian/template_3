@@ -43,7 +43,8 @@ $this->pageTitle=Yii::app()->name;
             </div>
             <div class="details">
                 <div class="number">
-                    <span data-counter="counterup" data-value="12,5">0</span>M$ </div>
+                    <span data-counter="counterup" data-value="12,5">0</span>M$
+                </div>
                 <div class="desc"> Total Profit </div>
             </div>
         </a>
@@ -67,8 +68,9 @@ $this->pageTitle=Yii::app()->name;
                 <i class="fa fa-globe"></i>
             </div>
             <div class="details">
-                <div class="number"> +
-                    <span data-counter="counterup" data-value="89"></span>% </div>
+                <div class="number">
+                    <span data-counter="counterup" data-value="89">0</span>%
+                </div>
                 <div class="desc"> Brand Popularity </div>
             </div>
         </a>
