@@ -145,7 +145,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 ?>
                
                 $(".only_number").inputmask({mask:"9",repeat:10,greedy:!1});
-                $('.start_date, .end_date').datepicker({
+                $('.only_date, .start_date, .end_date').datepicker({
                     format: 'dd-mm-yyyy',
                     autoclose: true,
                     todayBtn:'linked',
