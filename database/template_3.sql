@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 23, 2017 at 03:47 AM
+-- Generation Time: Dec 27, 2017 at 10:35 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -146,7 +146,7 @@ CREATE TABLE `brand` (
 --
 
 INSERT INTO `brand` (`id`, `brand_name`, `brand_type`, `user_created`, `time_created`, `user_modified`, `time_modified`, `deleted`) VALUES
-(1, 'Apple', 'Computers', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0),
+(1, 'Apple', 'Computers', 0, '0000-00-00 00:00:00', 1, '2017-12-14 13:43:11', 0),
 (2, 'Samsung', 'Handphone', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0),
 (3, 'Test', 'Handphone', 0, '0000-00-00 00:00:00', 1, '2017-11-06 14:13:20', 1),
 (4, 'Lenovo', 'Computers', 1, '2017-11-06 07:52:43', 1, '2017-11-06 07:56:12', 0),
@@ -154,7 +154,7 @@ INSERT INTO `brand` (`id`, `brand_name`, `brand_type`, `user_created`, `time_cre
 (6, 'Yamaha', 'Otomotif', 1, '2017-11-06 08:03:04', 1, '2017-11-06 14:12:57', 0),
 (7, 'Honda', 'Otomotif', 1, '2017-11-06 14:13:37', 1, '2017-11-06 14:14:03', 0),
 (8, 'Gucci', 'Accessories', 3, '2017-11-08 16:37:15', 0, '0000-00-00 00:00:00', 0),
-(9, 'Google', 'Computers', 3, '2017-11-08 16:37:48', 0, '0000-00-00 00:00:00', 0),
+(9, 'Google', 'Computers', 3, '2017-11-08 16:37:48', 1, '2017-12-14 13:43:16', 0),
 (10, 'Levi\'s', 'Fashion', 3, '2017-11-08 16:38:06', 0, '0000-00-00 00:00:00', 0),
 (11, 'Nokia', 'Handphone', 3, '2017-11-08 16:38:20', 0, '0000-00-00 00:00:00', 0),
 (12, 'Panasonic', 'Electronic', 3, '2017-11-08 16:38:35', 3, '2017-11-08 16:39:13', 0),
@@ -294,7 +294,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `activkey`, `create_at`, `lastvisit_at`, `superuser`, `status`) VALUES
-(1, 'admin', '5e31a175b489d1fec64fb59148e7f197', 'admin@nadyne.com', 'e2e79d67f31ab9236c5cbd734727fc62', '2017-10-31 06:03:36', '2017-11-22 10:28:52', 1, 1),
+(1, 'admin', '5e31a175b489d1fec64fb59148e7f197', 'admin@nadyne.com', 'e2e79d67f31ab9236c5cbd734727fc62', '2017-10-31 06:03:36', '2017-12-15 03:32:23', 1, 1),
 (2, 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229', 'demo@nadyne.com', '099f825543f7850cc038b90aaff39fac', '2017-11-01 06:03:36', '2017-11-09 07:23:30', 0, 1),
 (3, 'octavian', '5e31a175b489d1fec64fb59148e7f197', 'octavian.ocpang@gmail.com', '23e691b5eaebf32d8478847fc0c49fe6', '2017-11-02 03:17:47', '2017-11-16 06:22:25', 0, 1);
 
