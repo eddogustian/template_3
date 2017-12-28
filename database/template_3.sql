@@ -257,7 +257,7 @@ CREATE TABLE `profiles_fields` (
 INSERT INTO `profiles_fields` (`id`, `varname`, `title`, `field_type`, `field_size`, `field_size_min`, `required`, `match`, `range`, `error_message`, `other_validator`, `default`, `widget`, `widgetparams`, `position`, `visible`, `hidden_field`) VALUES
 (1, 'lastname', 'Last Name', 'VARCHAR', '50', '3', 1, '', '', 'Incorrect Last Name (length between 3 and 50 characters).', '', '', '', '', 1, 3, 0),
 (2, 'firstname', 'First Name', 'VARCHAR', '50', '3', 1, '', '', 'Incorrect First Name (length between 3 and 50 characters).', '', '', '', '', 0, 3, 0),
-(3, 'level', 'Level User', 'VARCHAR', '50', '3', 1, '', 'admin==Admin;branch==Branch;guest==Guest', 'Incorrect Last Name (length between 3 and 50 characters).', '', '', '', '', 2, 3, 1);
+(3, 'level', 'Level User', 'VARCHAR', '50', '3', 1, '', 'admin==Admin;branch==Branch;guest==Guest', 'Incorrect Level User', '', '', '', '', 2, 3, 1);
 
 -- --------------------------------------------------------
 
