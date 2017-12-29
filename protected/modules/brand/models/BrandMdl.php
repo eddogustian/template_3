@@ -119,7 +119,7 @@ class BrandMdl extends Brand
 		$criteria->compare('time_created',$this->time_created,true);
 		$criteria->compare('user_modified',$this->user_modified);
 		$criteria->compare('time_modified',$this->time_modified,true);
-		// $criteria->compare('deleted',$this->deleted);
+		$criteria->compare('deleted',$this->deleted);
 		$criteria->order = 'brand_name ASC';
 
 		return BrandMdl::model()->findAll($criteria);

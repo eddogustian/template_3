@@ -333,7 +333,7 @@ class AdminController extends RController
 			->setKeywords("download, User")
 			->setCategory("Download");
 	
-		$objPHPExcel->getActiveSheet()->setTitle('DATA USER');
+		$objPHPExcel->getActiveSheet()->setTitle(strtoupper('Data User'));
 		$worksheet = $objPHPExcel->getActiveSheet();
 	
 		$data = $model->downloadDataByFilter();

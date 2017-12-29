@@ -268,7 +268,7 @@ class BrandController extends RController
 			->setKeywords("download, Brand")
 			->setCategory("Download");
 	
-		$objPHPExcel->getActiveSheet()->setTitle('DATA BRAND');
+		$objPHPExcel->getActiveSheet()->setTitle(strtoupper('Data Brand'));
 		$worksheet = $objPHPExcel->getActiveSheet();
 	
 		$data = $model->downloadDataByFilter();
