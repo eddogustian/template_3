@@ -61,6 +61,8 @@ class BrandController extends RController
 	 */
 	public function actionView($id)
 	{
+		$this->redirect(Yii::app()->baseUrl.'/index.php/brand/brand');
+		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -150,6 +152,8 @@ class BrandController extends RController
 	 */
 	public function actionIndex()
 	{
+		$this->redirect(Yii::app()->baseUrl.'/index.php/brand/brand');
+		
 		$dataProvider=new CActiveDataProvider('BrandMdl');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
