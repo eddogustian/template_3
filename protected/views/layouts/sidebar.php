@@ -17,7 +17,7 @@
                             <!-- END SIDEBAR TOGGLER BUTTON -->
                             <li class="nav-item <?=Yii::app()->controller->id == 'site' && Yii::app()->controller->action->id == 'index' ? 'active open' : ''?>">
                                 <a href="<?=Yii::app()->baseUrl.'/index.php/site'?>" class="nav-link">
-                                    <i class="icon-home"></i>
+                                    <i class="fa fa-tachometer"></i>
                                     <span class="title">Dashboard</span>
                                     <?=Yii::app()->controller->id == 'site' ? '<span class="selected"></span>' : ''?>
                                 </a>
