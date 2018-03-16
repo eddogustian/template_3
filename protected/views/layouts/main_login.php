@@ -44,7 +44,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- END PAGE LEVEL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/img/logo.png" /> </head>
+        <link rel="shortcut icon" href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/img/favicon.png" /> </head>
     <!-- END HEAD -->
 
     <body class="login">

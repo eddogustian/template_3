@@ -48,7 +48,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/img/logo.png" /> 
+        <link rel="shortcut icon" href="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/img/favicon.png" /> 
 
         <!--[if lt IE 9]>
 		<script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/plugins/respond.min.js"></script>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 27, 2017 at 10:35 AM
+-- Generation Time: Mar 16, 2018 at 07:22 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -199,7 +199,7 @@ INSERT INTO `menu` (`id`, `menu_order`, `menu_name`, `menu_url`, `menu_icon`, `p
 (1, 1, 'Menu', 'menu/menu', 'icon-menu', 0, 1, 1, '2017-11-15 14:04:00', 0, NULL, 0),
 (2, 2, 'User', 'user/admin', 'icon-user', 0, 1, 1, '2017-11-15 14:06:00', 0, NULL, 0),
 (3, 3, 'Usermenu', 'usermenu/usermenu', 'icon-settings', 2, 1, 1, '2017-11-15 14:04:00', 1, '2017-11-16 16:15:42', 0),
-(4, 4, 'Brand', 'brand/brand', 'icon-diamond', 0, 1, 1, '2017-11-15 14:06:00', 0, NULL, 0),
+(4, 4, 'Brand', 'brand/brand', 'icon-diamond', 0, 1, 1, '2017-11-15 14:06:00', 1, '2018-01-02 18:47:10', 0),
 (5, 5, 'Test1', 'test/test1', 'icon-test1', 0, 0, 1, '2017-11-16 16:10:30', 1, '2017-11-17 14:41:33', 1);
 
 -- --------------------------------------------------------
@@ -294,7 +294,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `activkey`, `create_at`, `lastvisit_at`, `superuser`, `status`) VALUES
-(1, 'admin', '5e31a175b489d1fec64fb59148e7f197', 'admin@nadyne.com', 'e2e79d67f31ab9236c5cbd734727fc62', '2017-10-31 06:03:36', '2017-12-15 03:32:23', 1, 1),
+(1, 'admin', '5e31a175b489d1fec64fb59148e7f197', 'admin@nadyne.com', 'e2e79d67f31ab9236c5cbd734727fc62', '2017-10-31 06:03:36', '2018-01-11 06:25:21', 1, 1),
 (2, 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229', 'demo@nadyne.com', '099f825543f7850cc038b90aaff39fac', '2017-11-01 06:03:36', '2017-11-09 07:23:30', 0, 1),
 (3, 'octavian', '5e31a175b489d1fec64fb59148e7f197', 'octavian.ocpang@gmail.com', '23e691b5eaebf32d8478847fc0c49fe6', '2017-11-02 03:17:47', '2017-11-16 06:22:25', 0, 1);
 
