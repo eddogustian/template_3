@@ -8,6 +8,8 @@ class DefaultController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$this->redirect(Yii::app()->baseUrl.'/index.php/user/admin');
+		
 		$user = User::model()->findByPk(Yii::app()->user->id);
 		if($user->profile->level != 'admin')
 			$this->redirect(Yii::app()->baseUrl.'/index.php/site/forbidden');
