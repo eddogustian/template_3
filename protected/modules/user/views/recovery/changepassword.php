@@ -9,28 +9,33 @@ $this->breadcrumbs=array(
 
 
 <div class="form">
-<?php echo CHtml::beginForm(); ?>
+	<?php echo CHtml::beginForm(); ?>
+	
+	<?php if(CHtml::errorSummary($form) != ''): ?>
+		<div class="alert alert-danger">
+			<button class="close" data-close="alert"></button>
+			<span> <?php echo CHtml::errorSummary($form); ?> </span>
+		</div>
+	<?php endif; ?>
+	
+	<div class="form-body">
+		<div class="form-group">
+			<label class="control-label visible-ie8 visible-ie9"><?php echo CHtml::activeLabelEx($form,'password');?></label>
+			<?php echo CHtml::activePasswordField($form,'password',array('size'=>50,'maxlength'=>50, 'class' => 'form-control input-sm', 'style'=>'background-color: transparant;', 'placeholder'=>'Password ')); ?>	
+			<span class="help-block"><?php echo UserModule::t("Minimal password length 4 symbols."); ?></span>
+		</div>
 
-	<p class="note"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></p>
-	<?php echo CHtml::errorSummary($form); ?>
+		<div class="form-group">
+			<label class="control-label visible-ie8 visible-ie9"><?php echo CHtml::activeLabelEx($form,'verifyPassword');?></label>
+			<?php echo CHtml::activePasswordField($form,'verifyPassword',array('size'=>50,'maxlength'=>50, 'class' => 'form-control input-sm', 'style'=>'background-color: transparant;', 'placeholder'=>'Retype Password')); ?>	
+			<span class="help-block"><?php echo UserModule::t("Minimal password length 4 symbols."); ?></span>
+		</div>
 	
-	<div class="row">
-	<?php echo CHtml::activeLabelEx($form,'password'); ?>
-	<?php echo CHtml::activePasswordField($form,'password'); ?>
-	<p class="hint">
-	<?php echo UserModule::t("Minimal password length 4 symbols."); ?>
-	</p>
-	</div>
-	
-	<div class="row">
-	<?php echo CHtml::activeLabelEx($form,'verifyPassword'); ?>
-	<?php echo CHtml::activePasswordField($form,'verifyPassword'); ?>
-	</div>
-	
-	
-	<div class="row submit">
-	<?php echo CHtml::submitButton(UserModule::t("Save")); ?>
+		<div class="form-group">
+			<?php echo CHtml::submitButton(UserModule::t("Save"), array('class' => 'btn green')); ?>
+			<button type="reset" class="btn btn-default">Reset</button>
+		</div>
 	</div>
 
-<?php echo CHtml::endForm(); ?>
+	<?php echo CHtml::endForm(); ?>
 </div><!-- form -->

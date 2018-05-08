@@ -62,7 +62,7 @@ License: You must have a valid license purchased only from themeforest(the above
             
         </div>
         <div class="copyright"> 
-            2017 &copy; <?php echo Yii::app()->params['company']; ?>. 
+            <?=date('Y')?> &copy; <?php echo Yii::app()->params['company']; ?>. 
             Developed By <a target="_blank" href="<?php echo Yii::app()->params['author_link']; ?>"><?php echo Yii::app()->params['authors']; ?></a>.<br/>
             All Rights Reserved.
         </div>

@@ -192,7 +192,8 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
-		// this is used in contact page
+		'adminEmail'=>'noreplay@nadyne.com',
+
 		'saved_successfully'=>'Saved successfully',
 		'updated_successfully'=>'Updated successfully',
 		'deleted_successfully'=>'Deleted successfully',

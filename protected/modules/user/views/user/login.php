@@ -29,8 +29,6 @@ $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Login");
 			Remember
 			<span></span>
 		</label>
-		<!--
-			<a href="<?php echo Yii::app()->baseUrl; ?>/index.php/user/recovery" id="forget-password" class="forget-password">Forgot Password?</a>
-		-->
+		<a href="<?php echo Yii::app()->baseUrl; ?>/index.php/user/recovery" id="forget-password" class="forget-password">Forgot Password?</a>
 	</div>
 </form>
