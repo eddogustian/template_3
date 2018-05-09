@@ -25,7 +25,7 @@ class AppComponent extends CApplicationComponent {
         $get_data = Yii::app()->db->createCommand($sql)->queryAll();
         
         $user_access = 0;
-        if (count(($get_data) > 0)) {
+        if (count($get_data) > 0) {
             foreach($get_data as $row){
                 $user_access = $row[$access];
             }
@@ -41,7 +41,7 @@ class AppComponent extends CApplicationComponent {
         $get_data = Yii::app()->db->createCommand($sql)->queryAll();
         
         $menu_icon = 'icon-grid';
-        if (count(($get_data) > 0)) {
+        if (count($get_data) > 0) {
             foreach($get_data as $row){
                 $menu_icon = $row['menu_icon'];
             }

@@ -87,7 +87,7 @@ class UserMenuMdl extends UserMenu
 		$sql = "SELECT id, username FROM users WHERE status = 1 ORDER BY username";
 		$get_data = Yii::app()->db->createCommand($sql)->queryAll();
 		$get_data_user = array('' => '');
-		if (count(($get_data) > 0)) {
+		if (count($get_data) > 0) {
 			foreach($get_data as $row){
 				$get_data_user[$row['id']] = ucwords($row['username']);
 			}
@@ -96,7 +96,7 @@ class UserMenuMdl extends UserMenu
 		$sql = "SELECT id, menu_name FROM menu WHERE deleted = 0 ORDER BY menu_name";
 		$get_data = Yii::app()->db->createCommand($sql)->queryAll();
 		$get_data_menu = array('' => '');
-		if (count(($get_data) > 0)) {
+		if (count($get_data) > 0) {
 			foreach($get_data as $row){
 				$get_data_menu[$row['id']] = ucwords($row['menu_name']);
 			}
