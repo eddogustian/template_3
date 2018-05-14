@@ -27,10 +27,10 @@ class UsermenuModule extends CWebModule
 	}
 
 	public static function t($str='',$params=array(),$dic='user') {
-		if (Yii::t("UserMenuModule", $str)==$str)
-		    return Yii::t("UserMenuModule.".$dic, $str, $params);
+		if (Yii::t("UsermenuModule", $str)==$str)
+		    return Yii::t("UsermenuModule.".$dic, $str, $params);
         else
-            return Yii::t("UserMenuModule", $str, $params);
+            return Yii::t("UsermenuModule", $str, $params);
 	}
 	
 }
