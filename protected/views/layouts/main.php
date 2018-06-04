@@ -81,6 +81,13 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/scripts/quick-sidebar.min.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->baseUrl; ?>/themes/metronic/scripts/quick-nav.min.js" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
+        <!-- BEGIN STYLE GLOBAL -->
+        <style>
+        .table-scrollable{
+            border: none;
+        }
+        </style>
+        <!-- END STYLE GLOBAL -->
     </head>
     <!-- END HEAD -->
 
