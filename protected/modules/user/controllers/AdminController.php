@@ -390,3 +390,43 @@ class AdminController extends RController
     }
     
 }
+// untuk nambah user otomatis dinamis
+//  if($model->save()) {
+// 					$profile->user_id=$model->id;
+// 					$profile->save();
+
+// 					$itemname = 'Admin';
+// 					if($profile->level == 'guest')
+// 						$itemname = 'Guest';
+
+// 					$sql = "INSERT INTO AuthAssignment (itemname, userid) VALUES ('$itemname','$model->id')";
+// 					$command=Yii::app()->db->createCommand($sql);
+// 					$command->execute(); // execute the non-query SQL
+
+// 					if($profile->level == 'admin'){
+// 						$values = "(".$model->id.",1,1,1,1,1,1,1,".Yii::app()->user->id.",'".date('Y-m-d H:i:s')."'),
+// 									(".$model->id.",2,1,1,1,1,1,1,".Yii::app()->user->id.",'".date('Y-m-d H:i:s')."'),
+// 									(".$model->id.",3,1,1,1,1,1,1,".Yii::app()->user->id.",'".date('Y-m-d H:i:s')."'),
+// 									(".$model->id.",4,1,1,1,1,1,1,".Yii::app()->user->id.",'".date('Y-m-d H:i:s')."'),
+// 									(".$model->id.",5,1,1,1,1,1,1,".Yii::app()->user->id.",'".date('Y-m-d H:i:s')."'),
+// 									(".$model->id.",6,1,1,1,1,1,1,".Yii::app()->user->id.",'".date('Y-m-d H:i:s')."'),
+// 									(".$model->id.",9,1,1,1,1,1,1,".Yii::app()->user->id.",'".date('Y-m-d H:i:s')."'),
+// 									(".$model->id.",13,1,1,1,1,1,1,".Yii::app()->user->id.",'".date('Y-m-d H:i:s')."'),
+// 									(".$model->id.",14,1,1,1,1,1,1,".Yii::app()->user->id.",'".date('Y-m-d H:i:s')."'),
+// 									(".$model->id.",15,1,0,1,1,1,1,".Yii::app()->user->id.",'".date('Y-m-d H:i:s')."')
+// 									";
+
+// 						$sql = "INSERT INTO users_menu (`user_id`, `menu_id`, `create`, `update`, `delete`, `verify`, `print`, `status`, `user_created`, `time_created`) VALUES ".$values;
+// 						$command=Yii::app()->db->createCommand($sql);
+// 						$command->execute(); // execute the non-query SQL
+// 					}
+// 				}
+// : ada di contoller AdminController module User do
+// : ada di bagian bawah ini kalo mau nambahin usermenu otomatis
+
+// $itemname = 'Admin';
+// if($profile->level == 'guest')
+// $itemname = 'Guest';
+// ini contoh aja kalo level nya admin
+
+// if($profile->level == 'admin'){
